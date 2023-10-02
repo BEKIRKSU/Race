@@ -10,6 +10,14 @@ def move_forwards():
 def move_backwards():
     shell.backward(10)
 
+def turn_left():
+    new_heading = shell.heading() + 10
+    shell.setheading(new_heading)
+#     Could also just use shell.left(10)
+def turn_right():
+    new_heading = shell.heading() - 10
+    shell.setheading(new_heading)
+
 screen.listen()
 screen.onkey(key="w", fun=move_forwards)
 screen.onkey(key="s", fun=move_backwards)
