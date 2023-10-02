@@ -18,11 +18,17 @@ def turn_right():
     new_heading = shell.heading() - 10
     shell.setheading(new_heading)
 
+def clear():
+    shell.clear()
+    shell.penup()
+    shell.home()
+
 screen.listen()
 screen.onkey(key="w", fun=move_forwards)
 screen.onkey(key="s", fun=move_backwards)
 screen.onkey(key="a", fun=turn_left)
 screen.onkey(key="d", fun=turn_right)
+screen.onkey(key="c", fun=clear)
 # we don't add the parentheses to the end when the function is called as an argument because
 # the parentheses trigger the function there and then. What we want is for the method 'onkey' to
 # listen for when the space-bar is pressed and only when that happens to trigger the move forward
