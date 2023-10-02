@@ -22,7 +22,7 @@ def clear():
     shell.clear()
     shell.penup()
     shell.home()
-
+# Find the relevant methods in the documentation. Patience + play around with the code.
 screen.listen()
 screen.onkey(key="w", fun=move_forwards)
 screen.onkey(key="s", fun=move_backwards)
@@ -43,3 +43,12 @@ screen.onkey(key="c", fun=clear)
 # such as 'onkey'.
 screen.exitonclick()
 # this is added so the screen doesn't disappear when we run it and only disappears when we click off.
+
+# we can create as many turtles just like we created Shell above. Even tho they'll all be tutle objects
+# they function completely independent of each other, in programming we would say that they are
+# each a separate 'instance'. They each an example of the turtle object. Just like real life.
+# Two turtles with different attributes, doing different things. These objects can
+# have different attributes and can be performing different methods at any one time, is called
+# their 'state'. The state of one objects Color attribute can be green and the other red.
+# So they have different states in terms of their attributes or appearance. They can also have different
+# state in terms of what they are doing. One goes forward, whilst one doesn't etc.
